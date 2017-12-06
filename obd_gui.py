@@ -233,14 +233,38 @@ class OBDPanelGauges(wx.Panel):
             self.texts.append(t2)
             gridSizer.Add(boxSizer, 1, wx.EXPAND | wx.ALL)
 
+			
         # Add invisible boxes if necessary
-        nsensors = len(sensors)
+        nsensors = len(sensors)+1
         for i in range(6-nsensors):
-            box = OBDStaticBox(self)
-            boxSizer = wx.StaticBoxSizer(box, wx.VERTICAL)
-            self.boxes.append(box)
-            box.Show(False)
-            gridSizer.Add(boxSizer, 1, wx.EXPAND | wx.ALL)
+			if i<1:
+				# Create ECU Setting Box
+				(name, value, unit) = ("ECU Setting", "Default", "")
+				box = OBDStaticBox(self, wx.ID_ANY)
+				self.boxes.append(box)
+				boxSizer = wx.StaticBoxSizer(box, wx.VERTICAL)
+				# Text for ECU value
+				t1 = wx.StaticText(parent=self, label=str(value), style=wx.ALIGN_CENTER)
+				t1.SetForegroundColour('WHITE')
+				font1 = wx.Font(32, wx.ROMAN, wx.NORMAL, wx.NORMAL, faceName="Monaco")
+				t1.SetFont(font1)
+				boxSizer.Add(t1, 0, wx.ALIGN_CENTER | wx.ALL, 20)
+				boxSizer.AddStretchSpacer()
+				self.texts.append(t1)
+				# Text for 'ECU Setting'
+				t2 = wx.StaticText(parent=self, label=unit+"\n"+name, style=wx.ALIGN_CENTER)
+				t2.SetForegroundColour('WHITE')
+				font2 = wx.Font(13, wx.ROMAN, wx.NORMAL, wx.BOLD, faceName="Monaco")
+				t2.SetFont(font2)
+				boxSizer.Add(t2, 0, wx.ALIGN_CENTER | wx.ALL, 5)
+				self.texts.append(t2)
+				gridSizer.Add(boxSizer, 1, wx.EXPAND | wx.ALL)
+			else:
+				box = OBDStaticBox(self)
+				boxSizer = wx.StaticBoxSizer(box, wx.VERTICAL)
+				self.boxes.append(box)
+				box.Show(False)
+				gridSizer.Add(boxSizer, 1, wx.EXPAND | wx.ALL)
            
         # Layout
         boxSizerMain.Add(gridSizer, 1, wx.EXPAND | wx.ALL, 10)
