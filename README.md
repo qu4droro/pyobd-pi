@@ -34,11 +34,14 @@ We'll be doing this from a console cable connection, but you can just as easily 
 
 Note: For the following command line instructions, do not type the '#', that is only to indicate that it is a command to enter.
 
+
 Before proceeding, run:
+<pre>
 #  sudo apt-get update
 #  sudo apt-get upgrade
 #  sudo apt-get autoremove
 #  sudo reboot
+</pre>
 
 Install these components using the command:
 #  sudo apt-get install python-serial
