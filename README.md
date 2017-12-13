@@ -2,7 +2,7 @@
 
 ## pyOBD
 
-<pre>OBD-Pi: Raspberry Pi Displaying Car Diagnostics (OBD-II) Data On An Aftermarket Head Unit
+OBD-Pi: Raspberry Pi Displaying Car Diagnostics (OBD-II) Data On An Aftermarket Head Unit
 
 In this tutorial you will learn how to connect your Raspberry Pi to a Bluetooth OBD-II adapter and display realtime engine data to your cars aftermarket head unit.
 
@@ -34,10 +34,12 @@ We'll be doing this from a console cable connection, but you can just as easily 
 Note: For the following command line instructions, do not type the '#', that is only to indicate that it is a command to enter.
 
 Before proceeding, run:
+<pre>
 #  sudo apt-get update
 #  sudo apt-get upgrade
 #  sudo apt-get autoremove
 #  sudo reboot
+</pre>
 
 Install these components using the command:
 #  sudo apt-get install python-serial
@@ -90,5 +92,4 @@ If you would like to log your data run:
 The logged data file will be saved under:
 /home/username/pyobd-pi/log/
 
-Enjoy and drive safe!</pre>
 
