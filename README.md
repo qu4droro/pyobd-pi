@@ -1,8 +1,7 @@
 # RPI-ECU Tuner
 by Ryan Switzer
-## pyOBD
 
-### Hardware & Installation:
+## Hardware & Installation:
 #### Hardware
 * Raspberry Pi
 * Aftermarket head unit (Note: Must support Auxiliary input)
@@ -20,7 +19,9 @@ by Ryan Switzer
 5. Finally turn your key to the ON position and navigate your head unit to Auxiliary input.
 
 
-### Software Installation:
+## Software Installation
+
+### pyOBD
 Before proceeding, execute the following:
 <pre>
 #  sudo apt-get update
@@ -72,3 +73,4 @@ The logged data file will be saved under:
 /home/username/pyobd-pi/log/
 
 
+### SocketCAN
