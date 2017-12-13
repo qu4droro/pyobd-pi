@@ -1,0 +1,25 @@
+{
+  "name" : "Default",
+  "ecu-setting" : "Stock",
+  "active" : true,
+  "parameters" : [
+    {
+      "name" : "AFR",
+      "memory-start" : "0x6D440000",
+      "memory-end" : "0x6D4F0000",
+      "matrix" : []
+    },
+    {
+      "name" : "Fuel",
+      "memory-start" : "0x2F820000",
+      "memory-end" : "0x2F8C0000",
+      "matrix" : []
+    },
+    {
+      "name" : "Air",
+      "memory-start" : "0x5A530000",
+      "memory-end" : "0x5A5D0000",
+      "matrix" : []
+    }
+  ]
+}
