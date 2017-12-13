@@ -3,7 +3,7 @@
 pyOBD
 =====
 
-OBD-Pi: Raspberry Pi Displaying Car Diagnostics (OBD-II) Data On An Aftermarket Head Unit
+<pre>OBD-Pi: Raspberry Pi Displaying Car Diagnostics (OBD-II) Data On An Aftermarket Head Unit
 
 In this tutorial you will learn how to connect your Raspberry Pi to a Bluetooth OBD-II adapter and display realtime engine data to your cars aftermarket head unit.
 
@@ -91,5 +91,5 @@ If you would like to log your data run:
 The logged data file will be saved under:
 /home/username/pyobd-pi/log/
 
-Enjoy and drive safe!
+Enjoy and drive safe!</pre>
 
