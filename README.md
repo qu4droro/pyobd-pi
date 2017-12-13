@@ -95,6 +95,16 @@ blacklist i2c-bcm2708
 #blacklist mcp251x
 </pre>
 
+Reboot before configuring
+<pre>
+$  reboot
+</pre>
+
+Configure the CAN bus interface bitrate to 500kbs
+<pre>
+$  ip link set can0 type can bitrate 500000
+</pre>
+
 
 ## Execution
 
@@ -131,3 +141,10 @@ The logged data file will be saved under:
 /home/username/pyobd-pi/log/
 
 ### SocketCAN
+
+Open the terminal and use the following commands to start dumping frames
+<pre>
+$  ip link set can0 up
+$  candump -cae can0,0:0,#FFFFFFFF
+</pre>
+
