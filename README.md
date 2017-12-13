@@ -1,4 +1,4 @@
-# RPI-ECU Tuner
+# RPI-ECU Tuner & Diagnostic
 by Ryan Switzer
 
 ## Hardware & Installation
@@ -21,7 +21,7 @@ by Ryan Switzer
 4. Insert the DB9-to-OBD cable into the OBD Splitter.
 5. Attach the PiCAN2 onto the Rasbeery Pi UART and connect to the DB9-to-OBD cable.
 4. Connect you RCA cable to the back of your aftermarket head unit and plug the other end the converter and then into your Raspberry Pi.
-4. Install your 2A Car Supply.
+4. Connect your 2A Car Supply to the Raspberry Pi and vehicle.
 5. Finally turn your key to the ON position and navigate your head unit to Auxiliary input.
 
 
@@ -45,7 +45,7 @@ $  sudo apt-get install python-wxgtk2.8 python-wxtools wx2.8-i18n libwxgtk2.8-de
 $  sudo reboot
 </pre>
 
-Next copy the source code over to the home directory via flash drive (or whatever preffered means).
+Next copy the source code over to the home directory via flash drive (or preffered file transfer means).
 
 
 
