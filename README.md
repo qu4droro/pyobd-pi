@@ -3,7 +3,7 @@
 ## pyOBD
 
 ### Hardware Required & Installation:
-##### Hardware
+#### Hardware
 * Raspberry Pi
 * Aftermarket head unit (Note: Must support Auxiliary input)
 * Plugable USB Bluetooth 4.0 Low Energy Micro Adapter
