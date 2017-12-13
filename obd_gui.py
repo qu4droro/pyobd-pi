@@ -20,7 +20,7 @@ from obd_sensors import *
 
 # OBD variables
 BACKGROUND_FILENAME = "bg_black.jpg"
-LOGO_FILENAME 		= "cowfish.png"
+LOGO_FILENAME 		= "rpi.png"
 
 #-------------------------------------------------------------------------------
 
