@@ -10,6 +10,7 @@
 import os
 import wx
 import time
+import json
 from threading import Thread
 
 from obd_capture import OBD_Capture
@@ -21,6 +22,9 @@ from obd_sensors import *
 # OBD variables
 BACKGROUND_FILENAME = "bg_black.jpg"
 LOGO_FILENAME 		= "rpi.png"
+ECU_SETTINGS        = ["settings/default-ecu.json",
+                        "settings/ecu-ecu.json",
+                        "settings/sport-ecu.json"]
 
 #-------------------------------------------------------------------------------
 
@@ -202,12 +206,12 @@ class OBDPanelGauges(wx.Panel):
             self.texts.append(t2)
             gridSizer.Add(boxSizer, 1, wx.EXPAND | wx.ALL)
 
-        # Add invisible boxes if necessary
+        # Add ECU Setting and invisible boxes if necessary
         nsensors = len(sensors)+1
         for i in range(6-nsensors):
 			if i<1:
 				# Create ECU Setting Box
-				(name, value, unit) = ("ECU Setting", "Default", "")
+				(name, value, unit) = readEcuSetting(self)
 				box = OBDStaticBox(self, wx.ID_ANY)
 				self.boxes.append(box)
 				boxSizer = wx.StaticBoxSizer(box, wx.VERTICAL)
@@ -280,6 +284,13 @@ class OBDPanelGauges(wx.Panel):
 
     def Paint(self, dc):
         dc.DrawBitmap(self.bitmap, 0, 0)
+        
+    def readEcuSetting(self):
+        for setting in ECU_SETTINGS:
+            ecu = json.load(open(setting))
+            if ecu["active"]:
+                return ("ECU Setting",ecu["name"], "")
+        
 
 #-------------------------------------------------------------------------------
 """
