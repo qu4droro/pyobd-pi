@@ -21,7 +21,7 @@ by Ryan Switzer
 4. Insert the DB9-to-OBD cable into the OBD Splitter.
 5. Attach the PiCAN2 onto the Rasbeery Pi UART and connect to the DB9-to-OBD cable.
 4. Connect you RCA cable to the back of your aftermarket head unit and plug the other end the converter and then into your Raspberry Pi.
-4. Install your 2A Car Supply / Switch or Micro USB Car Charger.
+4. Install your 2A Car Supply.
 5. Finally turn your key to the ON position and navigate your head unit to Auxiliary input.
 
 
