@@ -162,7 +162,7 @@ class OBDPort:
          code = string.split(code)
          code = string.join(code, "")
          
-         #cables can behave differently 
+         #cables can behave differently
          if code[:6] == "NODATA": # there is no such sensor
              return "NODATA"
              
@@ -247,7 +247,7 @@ class OBDPort:
             statusTrans.append("On")
             
          for i in range(2,len(statusRes)): #Tests
-              statusTrans.append(statusText[statusRes[i]]) 
+              statusTrans.append(statusText[statusRes[i]])
          
          return statusTrans
           
@@ -306,17 +306,17 @@ class OBDPort:
               
      def clear_dtc(self):
          """Clears all DTCs and freeze frame data"""
-         self.send_command(CLEAR_DTC_COMMAND)     
+         self.send_command(CLEAR_DTC_COMMAND)
          r = self.get_result()
          return r
      
-     def log(self, sensor_index, filename): 
+     def log(self, sensor_index, filename):
           file = open(filename, "w")
-          start_time = time.time() 
+          start_time = time.time()
           if file:
                data = self.sensor(sensor_index)
                file.write("%s     \t%s(%s)\n" % \
-                         ("Time", string.strip(data[0]), data[2])) 
+                         ("Time", string.strip(data[0]), data[2]))
                while 1:
                     now = time.time()
                     data = self.sensor(sensor_index)

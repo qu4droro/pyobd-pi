@@ -247,7 +247,7 @@ class OBDPanelGauges(wx.Panel):
         # Timer for update
         self.timer = wx.Timer(self)
         self.Bind(wx.EVT_TIMER, self.refresh, self.timer)
-        self.timer.Start(2000)
+        self.timer.Start(200)
 
 
     def refresh(self, event):
