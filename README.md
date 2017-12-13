@@ -1,7 +1,6 @@
 # RPI-ECU Tuner
 
-pyOBD
-=====
+## pyOBD
 
 <pre>OBD-Pi: Raspberry Pi Displaying Car Diagnostics (OBD-II) Data On An Aftermarket Head Unit
 
