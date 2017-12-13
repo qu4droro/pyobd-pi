@@ -1,8 +1,8 @@
 # RPI-ECU Tuner
-
+by Ryan Switzer
 ## pyOBD
 
-### Hardware Required & Installation:
+### Hardware & Installation:
 #### Hardware
 * Raspberry Pi
 * Aftermarket head unit (Note: Must support Auxiliary input)
@@ -48,6 +48,8 @@ Launch BlueZ, the Bluetooth stack for Linux. Pair + Trust your ELM327 Bluetooth 
 
 Note: Click the Bluetooth icon, bottom right (Desktop) to configure your device. Right click on your Bluetooth device to bring up Connect To: SPP Dev.
 
+
+### Execution
 Open the terminal and enter the following:
 <pre>
 #  cd pyobd-pi
